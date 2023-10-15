@@ -18,7 +18,10 @@ class NotesVeiwBody extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
-          CustomAppBar(),
+          CustomAppBar(
+            title:"Notes" ,
+            icon: FontAwesomeIcons.magnifyingGlass,
+          ),
           Expanded(child: NotesListView()),
         ],
       ),
