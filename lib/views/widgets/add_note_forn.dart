@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note/cubits/add_note_cubit/cubit/add_note_cubit_cubit.dart';
+import 'package:note/cubits/add_note_cubit/add_note_cubit_cubit.dart';
 import 'package:note/models/note_model.dart';
 import 'package:note/views/widgets/custom_text_filed.dart';
 import 'package:note/views/widgets/cutom_buttom.dart';
@@ -52,7 +52,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
           BlocBuilder<AddNoteCubitCubit, AddNoteCubitState>(
             builder: (context, state) {
               return CustomButton(
-                isLoading:  state is AddNoteLoading ? true : false ,
+                isLoading: state is AddNoteLoading ? true : false,
                 onTap: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
